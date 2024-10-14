@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+  <br/>
+  <div class="container-fluid text-sm-center p-5 bg-info text-white "> 
+    <h1 class="display-2">Books app</h1>
+    <p class="lead">A Books website built with Django.</p>
+    <p><a class="btn btn-primary btn-lg" href="{% url 'book_list' %}"
+      role="button" >View all books</a></p>
+</div>`
+{% endblock content %}
