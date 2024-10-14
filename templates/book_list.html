@@ -1,11 +1,17 @@
-{% extends 'base.html' %}
-{% block title %}Home{% endblock title %}
+{% extends "base.html" %}
+
+{% block title %}Books{% endblock title %}
+
 {% block content %}
-  <br/>
-  <div class="container-fluid text-sm-center p-5 bg-info text-white "> 
-    <h1 class="display-2">Books app</h1>
-    <p class="lead">A Books website built with Django.</p>
-    <p><a class="btn btn-primary btn-lg" href="{% url 'book_list' %}"
-      role="button" >View all books</a></p>
-</div>`
+<h1>Book List</h1>
+{% for book in all_books_list %}
+<div class="card">
+  <div class="card-header">
+    <span class="fw-bold">
+      {{ book.title }}
+    </span> 
+  </div>
+</div>
+<br />
+{% endfor %}
 {% endblock content %}
